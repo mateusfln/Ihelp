@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ihelp">
         <activity
+            android:name=".TelaColetaDeDados4"
+            android:exported="false" />
+        <activity
+            android:name=".TelaColetaDeDados3"
+            android:exported="false" />
+        <activity
+            android:name=".TelaColetaDeDados2"
+            android:exported="false" />
+        <activity
+            android:name=".TelaColetarDados"
+            android:exported="false" />
+        <activity
+            android:name=".Cadastro"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
