@@ -6,18 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class TelaColetaDeDados4 extends AppCompatActivity {
+public class TelaDeVendas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_coleta_de_dados4);
+        setContentView(R.layout.activity_tela_de_vendas);
         getSupportActionBar().hide();
     }
 
-
-    public void salvarInfo(View view) {
-        Intent y = new Intent(this, TelaColetarDados.class);
+    public void salvarInfoVendas(View view) {
+        Intent y = new Intent(this, BotaoEmergencia.class);
         startActivity(y);
     }
+
 }

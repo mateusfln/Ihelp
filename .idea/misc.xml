@@ -3,13 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_cadastro.xml" value="0.25" />
+        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_botao_emergencia.xml" value="0.2" />
+        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_cadastro.xml" value="1.0" />
+        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_cadastro_user.xml" value="0.22" />
         <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_tela_coleta_de_dados2.xml" value="0.33" />
-        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_tela_coleta_de_dados3.xml" value="0.22" />
-        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_tela_coleta_de_dados4.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_tela.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_tela_botao.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_tela_coleta_de_dados2.xml" value="0.25" />
+        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_tela_coleta_de_dados3.xml" value="0.25" />
+        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_tela_coleta_de_dados4.xml" value="0.25" />
         <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_tela_coletar_dados.xml" value="0.25" />
+        <entry key="..\:/Users/mateus_oliveira6/AndroidStudioProjects/Ihelp2/app/src/main/res/layout/activity_tela_de_vendas.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

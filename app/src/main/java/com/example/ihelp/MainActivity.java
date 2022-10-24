@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -26,25 +27,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        emailogin = findViewById(R.id.emailogin2);
-        senhalogin = findViewById(R.id.senhalogin2);
+        emailogin = findViewById(R.id.emailogin);
+        senhalogin = findViewById(R.id.senhalogin);
         alerta = new AlertDialog.Builder(this);
 
         getSupportActionBar().hide();
     }
 
     public void mudarTela() {
-        //Intent a = new Intent(this, Cadastro.class);
-        //startActivity(a);
+        Intent a = new Intent(this, TelaColetarDados.class);
+        startActivity(a);
     }
     public void irCadastro(View v){
-        Intent i = new Intent(this, Cadastro.class);
+        Intent i = new Intent(this, CadastroUser.class);
         startActivity(i);
     }
 
     public void print(String p) {
-        Toast.makeText(this, p, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, p, Toast.LENGTH_LONG).show();
     }
+
 
 
     public void verfica_usuario(View view) {
@@ -53,23 +55,29 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String mensagem = "Usuário não encontrado!";
                 for (DataSnapshot d : snapshot.getChildren()) {
-                    boolean aux = false;
                     String l = emailogin.getText().toString();
-                    int s = Integer.parseInt(senhalogin.getText().toString());
+                    String s = senhalogin.getText().toString();
 
                     for (DataSnapshot usuario : snapshot.getChildren()) {
-                        if (d.getValue(Usuario.class).getLogin().equals(l) && d.getValue(Usuario.class).getSenha() == s) {
-                            print("Bem Vindo!");
-                            mudarTela();
-                            break;
+                        if(!TextUtils.isEmpty(l) && !TextUtils.isEmpty(s)){
+                            int senhalogin_int = Integer.parseInt(senhalogin.getText().toString());
+                            if (d.getValue(Usuario.class).getLogin().equals(l) && d.getValue(Usuario.class).getSenha() == senhalogin_int) {
+                                mensagem = "Bem vindo\n"+l;
+                                TelaColetaDeDados2.logado = d.getValue(Usuario.class);
+                                mudarTela();
+                                break;
 
+                            }
+                        } else{
+                            mensagem = "Preencha todos os campos!";
                         }
                     }
-                    if (!aux) {
-                        print("Usuario não Encontrado!");
-                    }
+//
+
                 }
+                print(mensagem);
 
             }
 

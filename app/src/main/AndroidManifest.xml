@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ihelp">
         <activity
+            android:name=".BotaoEmergencia"
+            android:exported="false" />
+        <activity
+            android:name=".TelaDeVendas"
+            android:exported="false" />
+        <activity
             android:name=".TelaColetaDeDados4"
             android:exported="false" />
         <activity
@@ -22,7 +28,7 @@
             android:name=".TelaColetarDados"
             android:exported="false" />
         <activity
-            android:name=".Cadastro"
+            android:name=".CadastroUser"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
