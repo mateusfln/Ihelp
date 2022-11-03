@@ -1,15 +1,15 @@
 package com.example.ihelp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
     EditText emailogin, senhalogin;
     AlertDialog.Builder alerta;
-
+    String mensagem = "Usuário não encontrado!";
     Usuario u = new Usuario();
 
     @Override
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String mensagem = "Usuário não encontrado!";
+
                 for (DataSnapshot d : snapshot.getChildren()) {
                     String l = emailogin.getText().toString();
                     String s = senhalogin.getText().toString();
@@ -64,23 +64,21 @@ public class MainActivity extends AppCompatActivity {
                         if(!TextUtils.isEmpty(l) && !TextUtils.isEmpty(s)){
                             int senhalogin_int = Integer.parseInt(senhalogin.getText().toString());
                             if (d.getValue(Usuario.class).getLogin().equals(l) && d.getValue(Usuario.class).getSenha() == senhalogin_int) {
-                                mensagem = "Bem vindo\n"+l;
                                 TelaColetaDeDados2.logado = d.getValue(Usuario.class);
+                                TelaColetaDeDados3.logado = d.getValue(Usuario.class);
+                                TelaColetaDeDados4.logado = d.getValue(Usuario.class);
                                 mudarTela();
+                                mensagem = "Bem vindo\n"+l;
                                 break;
 
                             }
                         } else{
                             mensagem = "Preencha todos os campos!";
                         }
-                    }
-//
-
+                    }//
                 }
                 print(mensagem);
-
             }
-
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

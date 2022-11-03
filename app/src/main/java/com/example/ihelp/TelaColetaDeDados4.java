@@ -1,13 +1,13 @@
 package com.example.ihelp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class TelaColetaDeDados4 extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
+public class TelaColetaDeDados4 extends AppCompatActivity {
+    static Usuario logado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

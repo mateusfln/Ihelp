@@ -1,7 +1,5 @@
 package com.example.ihelp;
 
-import android.widget.EditText;
-
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -21,18 +19,22 @@ public class Usuario {
 
     }
 
-    public Usuario(String dataNasc, String nomeCompleto, String sexo, String cpf, String nTelefone,String doencasQuePossui, String medicamentosQueFazUso, String tipoSanguineo,String alergias) {
+    public Usuario(String doencasQuePossui, String alergias, String medicamentosQueFazUso, String tipoSanguineo) {
+        this.doencasQuePossui = doencasQuePossui;
+        this.alergias = alergias;
+        this.medicamentosQueFazUso = medicamentosQueFazUso;
+        this.tipoSanguineo = tipoSanguineo;
+    }
+
+
+
+
+    public Usuario(String dataNasc, String nomeCompleto, String sexo, String cpf, String nTelefone) {
         this.dataNasc = dataNasc;
         this.nomeCompleto = nomeCompleto;
         this.sexo = sexo;
         this.cpf = cpf;
         this.nTelefone = nTelefone;
-        this.doencasQuePossui = doencasQuePossui;
-        this.alergias= alergias;
-        this.medicamentosQueFazUso = medicamentosQueFazUso;
-        this.tipoSanguineo = tipoSanguineo;
-
-
     }
 
     public String getLogin() {
@@ -53,7 +55,7 @@ public class Usuario {
 
     public void salvar() {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-        reference.child("Usuarios").child(login).setValue(this);
+        reference.child("Usuarios").child(login.replace(".","")).setValue(this);
     }
 
     public String getDataNasc() {
@@ -130,7 +132,7 @@ public class Usuario {
 
     public void salvarInfo(){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-        reference.child("Usuarios").child(login).setValue(this);
+        reference.child("Usuarios").child(login.replace(".","")).setValue(this);
     }
 
 

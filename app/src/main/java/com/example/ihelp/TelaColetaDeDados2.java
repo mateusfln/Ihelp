@@ -1,17 +1,11 @@
 package com.example.ihelp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class TelaColetaDeDados2 extends AppCompatActivity {
     EditText dataNasc, nomeCompleto, sexo, cpf, nTelefone;
@@ -55,20 +49,20 @@ public class TelaColetaDeDados2 extends AppCompatActivity {
         startActivity(y);
     }
 
-    public void cadastrar() {
-        String a = dataNasc.getText().toString();
-        String b = nomeCompleto.getText().toString();
-        String c = sexo.getText().toString();
-        String d = cpf.getText().toString();
-        String e = nTelefone.getText().toString();
-        if (!TextUtils.isEmpty(a) && !TextUtils.isEmpty(b) && !TextUtils.isEmpty(c) && !TextUtils.isEmpty(d) && !TextUtils.isEmpty(e)) {
-            Usuario usu = new Usuario(a, b, c, d, e);
-            usu.salvarInfo();
-
-        } else {
-            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
-        }
-    }
+//    public void cadastrar() {
+//        String a = dataNasc.getText().toString();
+//        String b = nomeCompleto.getText().toString();
+//        String c = sexo.getText().toString();
+//        String d = cpf.getText().toString();
+//        String e = nTelefone.getText().toString();
+//        if (!TextUtils.isEmpty(a) && !TextUtils.isEmpty(b) && !TextUtils.isEmpty(c) && !TextUtils.isEmpty(d) && !TextUtils.isEmpty(e)) {
+//            Usuario usu = new Usuario(a, b, c, d, e);
+//            usu.salvarInfo();
+//
+//        } else {
+//            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
+//        }
+//    }
 }
 
 

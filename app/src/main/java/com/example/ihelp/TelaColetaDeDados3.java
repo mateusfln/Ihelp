@@ -1,13 +1,12 @@
 package com.example.ihelp;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class TelaColetaDeDados3 extends AppCompatActivity {
     EditText doencasQuePossui, alergias, medicamentosQueFazUso, tipoSanguineo;
@@ -37,7 +36,7 @@ public class TelaColetaDeDados3 extends AppCompatActivity {
         tipoSanguineo = findViewById(R.id.TpSanguineo);
         String ts = tipoSanguineo.getText().toString();
         u.setCpf(ts);
-        
+
         u.salvarInfo();
     }
 
@@ -46,17 +45,17 @@ public class TelaColetaDeDados3 extends AppCompatActivity {
         startActivity(y);
     }
 
-    public void cadastrar() {
-        String a = doencasQuePossui.getText().toString();
-        String b = alergias.getText().toString();
-        String c = medicamentosQueFazUso.getText().toString();
-        String d = tipoSanguineo.getText().toString();
-        if (!TextUtils.isEmpty(a) && !TextUtils.isEmpty(b) && !TextUtils.isEmpty(c) && !TextUtils.isEmpty(d) && !TextUtils.isEmpty(d)) {
-            Usuario usu = new Usuario(a, b, c, d);
-            usu.salvarInfo();
-            //salvarInfo(view);
-        } else {
-            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
-        }
-    }
+//    public void cadastrar() {
+//        String a = doencasQuePossui.getText().toString();
+//        String b = alergias.getText().toString();
+//        String c = medicamentosQueFazUso.getText().toString();
+//        String d = tipoSanguineo.getText().toString();
+//        if (!TextUtils.isEmpty(a) && !TextUtils.isEmpty(b) && !TextUtils.isEmpty(c) && !TextUtils.isEmpty(d) && !TextUtils.isEmpty(d)) {
+//            Usuario usu = new Usuario(a, b, c, d);
+//            usu.salvarInfo();
+//
+//        } else {
+//            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
+//        }
+//    }
 }
