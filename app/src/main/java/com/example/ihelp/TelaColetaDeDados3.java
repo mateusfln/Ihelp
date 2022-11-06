@@ -14,6 +14,7 @@ public class TelaColetaDeDados3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //hhhhh
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_coleta_de_dados3);
         getSupportActionBar().hide();
