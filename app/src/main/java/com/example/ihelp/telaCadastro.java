@@ -9,23 +9,23 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CadastroUser extends AppCompatActivity {
+public class telaCadastro extends AppCompatActivity {
     EditText email, senha;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro_user);
+        setContentView(R.layout.tela_cadastro);
         email = findViewById(R.id.emaiCadastro);
         senha = findViewById(R.id.senhaCadastro);
         getSupportActionBar().hide();
     }
     public void mudaTelaCadastro(View view) {
         Toast.makeText(this, "Usuario Cadastrado", Toast.LENGTH_SHORT).show();
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, TelaLogin.class);
         startActivity(i);
     }
     public void volta(View view) {
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, TelaLogin.class);
         startActivity(i);
     }
     public void cadastrar(View view){

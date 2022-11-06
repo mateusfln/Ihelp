@@ -27,8 +27,6 @@ public class Usuario {
     }
 
 
-
-
     public Usuario(String dataNasc, String nomeCompleto, String sexo, String cpf, String nTelefone) {
         this.dataNasc = dataNasc;
         this.nomeCompleto = nomeCompleto;
@@ -55,7 +53,7 @@ public class Usuario {
 
     public void salvar() {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-        reference.child("Usuarios").child(login.replace(".","")).setValue(this);
+        reference.child("Usuarios").child(login.replace(".", "")).setValue(this);
     }
 
     public String getDataNasc() {
@@ -102,9 +100,7 @@ public class Usuario {
         return doencasQuePossui;
     }
 
-    public void setDoencasQuePossui(String doencasQuePossui) {
-        this.doencasQuePossui = doencasQuePossui;
-    }
+    public void setDoencasQuePossui(String doencasQuePossui) {this.doencasQuePossui = doencasQuePossui;}
 
     public String getAlergias() {
         return alergias;
@@ -118,9 +114,7 @@ public class Usuario {
         return medicamentosQueFazUso;
     }
 
-    public void setMedicamentosQueFazUso(String medicamentosQueFazUso) {
-        this.medicamentosQueFazUso = medicamentosQueFazUso;
-    }
+    public void setMedicamentosQueFazUso(String medicamentosQueFazUso) {this.medicamentosQueFazUso = medicamentosQueFazUso;}
 
     public String getTipoSanguineo() {
         return tipoSanguineo;
@@ -130,11 +124,13 @@ public class Usuario {
         this.tipoSanguineo = tipoSanguineo;
     }
 
-    public void salvarInfo(){
+    public void salvarInfo() {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-        reference.child("Usuarios").child(login.replace(".","")).setValue(this);
+        reference.child("Usuarios").child(login.replace(".", "")).setValue(this);
+        telaInfoPessoais.logado = this;
+        telaInfoSaude.logado = this;
+        telaNumerosEmergencia.logado = this;
     }
 
 
 }
-

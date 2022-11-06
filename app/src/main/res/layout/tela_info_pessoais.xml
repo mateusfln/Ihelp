@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#7b1212"
     android:textAlignment="center"
-    tools:context=".TelaColetaDeDados2">
+    tools:context=".telaInfoPessoais">
 
 
     <EditText

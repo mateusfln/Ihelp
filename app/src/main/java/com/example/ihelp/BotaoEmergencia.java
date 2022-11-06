@@ -9,7 +9,7 @@ public class BotaoEmergencia extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_botao_emergencia);
+        setContentView(R.layout.tela_botao_emergencia);
         getSupportActionBar().hide();
     }
 }

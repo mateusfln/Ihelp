@@ -6,12 +6,12 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class TelaColetaDeDados4 extends AppCompatActivity {
+public class telaNumerosEmergencia extends AppCompatActivity {
     static Usuario logado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_coleta_de_dados4);
+        setContentView(R.layout.tela_numeros_emergencia);
         getSupportActionBar().hide();
     }
 

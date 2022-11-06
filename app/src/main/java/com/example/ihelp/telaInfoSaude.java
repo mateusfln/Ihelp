@@ -8,15 +8,14 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class TelaColetaDeDados3 extends AppCompatActivity {
+public class telaInfoSaude extends AppCompatActivity {
     EditText doencasQuePossui, alergias, medicamentosQueFazUso, tipoSanguineo;
     static Usuario logado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //hhhhh
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_coleta_de_dados3);
+        setContentView(R.layout.tela_info_saude);
         getSupportActionBar().hide();
     }
 
@@ -28,35 +27,20 @@ public class TelaColetaDeDados3 extends AppCompatActivity {
 
         alergias = findViewById(R.id.Alergia);
         String al = alergias.getText().toString();
-        u.setNomeCompleto(al);
+        u.setAlergias(al);
 
         medicamentosQueFazUso = findViewById(R.id.Medicamentos);
         String md = medicamentosQueFazUso.getText().toString();
-        u.setSexo(md);
+        u.setMedicamentosQueFazUso(md);
 
         tipoSanguineo = findViewById(R.id.TpSanguineo);
         String ts = tipoSanguineo.getText().toString();
-        u.setCpf(ts);
+        u.setTipoSanguineo(ts);
 
         u.salvarInfo();
-    }
 
-    public void salvarInfo(View view) {
         Intent y = new Intent(this, TelaColetarDados.class);
         startActivity(y);
-    }
 
-//    public void cadastrar() {
-//        String a = doencasQuePossui.getText().toString();
-//        String b = alergias.getText().toString();
-//        String c = medicamentosQueFazUso.getText().toString();
-//        String d = tipoSanguineo.getText().toString();
-//        if (!TextUtils.isEmpty(a) && !TextUtils.isEmpty(b) && !TextUtils.isEmpty(c) && !TextUtils.isEmpty(d) && !TextUtils.isEmpty(d)) {
-//            Usuario usu = new Usuario(a, b, c, d);
-//            usu.salvarInfo();
-//
-//        } else {
-//            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
-//        }
-//    }
+    }
 }

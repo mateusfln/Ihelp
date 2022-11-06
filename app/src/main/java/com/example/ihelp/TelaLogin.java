@@ -17,16 +17,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity {
+public class TelaLogin extends AppCompatActivity {
     EditText emailogin, senhalogin;
     AlertDialog.Builder alerta;
-    String mensagem = "Usuário não encontrado!";
     Usuario u = new Usuario();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.tela_login);
         emailogin = findViewById(R.id.emailogin);
         senhalogin = findViewById(R.id.senhalogin);
         alerta = new AlertDialog.Builder(this);
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(a);
     }
     public void irCadastro(View v){
-        Intent i = new Intent(this, CadastroUser.class);
+        Intent i = new Intent(this, telaCadastro.class);
         startActivity(i);
     }
 
@@ -55,29 +54,41 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String mensagem = "";
+                String l = emailogin.getText().toString();
+                String s = senhalogin.getText().toString();
+                if (!l.isEmpty() && !s.isEmpty()){
 
-                for (DataSnapshot d : snapshot.getChildren()) {
-                    String l = emailogin.getText().toString();
-                    String s = senhalogin.getText().toString();
+                    for (DataSnapshot d : snapshot.getChildren()) {
+                        for (DataSnapshot usuario : snapshot.getChildren()) {
+                            if(!TextUtils.isEmpty(l) && !TextUtils.isEmpty(s)){
+                                int senhalogin_int = Integer.parseInt(senhalogin.getText().toString());
+                                if (d.getValue(Usuario.class).getLogin().equals(l) && d.getValue(Usuario.class).getSenha() == senhalogin_int) {
+                                    telaInfoPessoais.logado = d.getValue(Usuario.class);
+                                    telaInfoSaude.logado = d.getValue(Usuario.class);
+                                    telaNumerosEmergencia.logado = d.getValue(Usuario.class);
+                                    emailogin.setText("");
+                                    senhalogin.setText("");
+                                    mudarTela();
+                                    mensagem = "Bem vindo\n"+l;
+                                    break;
 
-                    for (DataSnapshot usuario : snapshot.getChildren()) {
-                        if(!TextUtils.isEmpty(l) && !TextUtils.isEmpty(s)){
-                            int senhalogin_int = Integer.parseInt(senhalogin.getText().toString());
-                            if (d.getValue(Usuario.class).getLogin().equals(l) && d.getValue(Usuario.class).getSenha() == senhalogin_int) {
-                                TelaColetaDeDados2.logado = d.getValue(Usuario.class);
-                                TelaColetaDeDados3.logado = d.getValue(Usuario.class);
-                                TelaColetaDeDados4.logado = d.getValue(Usuario.class);
-                                mudarTela();
-                                mensagem = "Bem vindo\n"+l;
-                                break;
-
+                                }else{
+                                    mensagem = "Usuário nao encontrado!";
+                                }
+                            } else{
+                                mensagem = "Preencha todos os campos!";
                             }
-                        } else{
-                            mensagem = "Preencha todos os campos!";
                         }
-                    }//
+                    }
+                    if (!mensagem.isEmpty()){
+                        print(mensagem);
+
+                    }
+
                 }
-                print(mensagem);
+
+
             }
 
             @Override

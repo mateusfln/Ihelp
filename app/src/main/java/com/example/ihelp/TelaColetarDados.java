@@ -11,11 +11,11 @@ public class TelaColetarDados extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_coletar_dados);
+        setContentView(R.layout.tela_coletar_dados);
         getSupportActionBar().hide();
     }
     public void informacoesPessoais(View view){
-        Intent i = new Intent(this, TelaColetaDeDados2.class);
+        Intent i = new Intent(this, telaInfoPessoais.class);
         startActivity(i);
     }
 
@@ -25,7 +25,7 @@ public class TelaColetarDados extends AppCompatActivity {
     }
 
     public void informacoesNumero(View view){
-        Intent i = new Intent(this, TelaColetaDeDados4.class);
+        Intent i = new Intent(this, telaNumerosEmergencia.class);
         startActivity(i);
     }
 
@@ -35,7 +35,7 @@ public class TelaColetarDados extends AppCompatActivity {
     }
 
     public void salvarInfo(View view) {
-        Intent y = new Intent(this, MainActivity.class);
+        Intent y = new Intent(this, telaLogin.class);
         startActivity(y);
     }
 }
