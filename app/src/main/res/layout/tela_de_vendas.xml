@@ -19,11 +19,11 @@
         app:srcCompat="@drawable/iconeihelp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/plano1"
         android:layout_width="285dp"
         android:layout_height="101dp"
         android:background="#000000"
-        android:onClick="salvarInfoVendas"
+        android:onClick="salvarPlano1"
         android:text="Plano ConfortMax         49,90/mês"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
@@ -35,11 +35,11 @@
         app:layout_constraintVertical_bias="0.609" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/plano2"
         android:layout_width="285dp"
         android:layout_height="101dp"
         android:background="#000000"
-        android:onClick="salvarInfoVendas"
+        android:onClick="salvarPlano2"
         android:text="Plano ConfortPlus         89,90/mês"
         android:textAlignment="center"
         android:textColor="#FFFFFF"

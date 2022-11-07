@@ -15,17 +15,17 @@ public class TelaColetarDados extends AppCompatActivity {
         getSupportActionBar().hide();
     }
     public void informacoesPessoais(View view){
-        Intent i = new Intent(this, telaInfoPessoais.class);
+        Intent i = new Intent(this, TelaInfoPessoais.class);
         startActivity(i);
     }
 
     public void informacoesSaude(View view){
-        Intent i = new Intent(this, TelaColetaDeDados3.class);
+        Intent i = new Intent(this, TelaInfoSaude.class);
         startActivity(i);
     }
 
     public void informacoesNumero(View view){
-        Intent i = new Intent(this, telaNumerosEmergencia.class);
+        Intent i = new Intent(this, TelaContatosEmergencia.class);
         startActivity(i);
     }
 
@@ -35,7 +35,7 @@ public class TelaColetarDados extends AppCompatActivity {
     }
 
     public void salvarInfo(View view) {
-        Intent y = new Intent(this, telaLogin.class);
+        Intent y = new Intent(this, TelaLogin.class);
         startActivity(y);
     }
 }

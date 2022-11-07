@@ -16,22 +16,22 @@
             android:name=".TelaDeVendas"
             android:exported="false" />
         <activity
-            android:name=".telaNumerosEmergencia"
+            android:name=".TelaContatosEmergencia"
             android:exported="false" />
         <activity
-            android:name=".TelaColetaDeDados3"
+            android:name=".TelaInfoPessoais"
             android:exported="false" />
         <activity
-            android:name=".telaInfoPessoais"
+            android:name=".TelaInfoSaude"
             android:exported="false" />
         <activity
             android:name=".TelaColetarDados"
             android:exported="false" />
         <activity
-            android:name=".telaCadastro"
+            android:name=".TelaCadastro"
             android:exported="false" />
         <activity
-            android:name=".telaLogin"
+            android:name=".TelaLogin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

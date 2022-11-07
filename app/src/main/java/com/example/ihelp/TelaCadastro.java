@@ -9,12 +9,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class telaCadastro extends AppCompatActivity {
+public class TelaCadastro extends AppCompatActivity {
     EditText email, senha;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tela_cadastro);
+        setContentView(R.layout.tela_cadastrar);
         email = findViewById(R.id.emaiCadastro);
         senha = findViewById(R.id.senhaCadastro);
         getSupportActionBar().hide();
