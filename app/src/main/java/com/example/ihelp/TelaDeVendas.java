@@ -34,6 +34,7 @@ public class TelaDeVendas extends AppCompatActivity {
         Usuario u = logado;
         u.setPlanoContratado("Plano ConfortPlus 89.90/mês");
         u.salvarInfo();
+
         Intent y = new Intent(this, BotaoEmergencia.class);
         startActivity(y);
     }

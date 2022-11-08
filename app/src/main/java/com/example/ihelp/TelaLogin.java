@@ -52,6 +52,8 @@ public class TelaLogin extends AppCompatActivity {
         TelaLogin.logado = null;
         TelaInfoSaude.logado = null;
         TelaContatosEmergencia.logado = null;
+        TelaDeVendas.logado = null;
+
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Usuarios");
         reference.addValueEventListener(new ValueEventListener() {
@@ -71,6 +73,7 @@ public class TelaLogin extends AppCompatActivity {
                                 TelaLogin.logado = d.getValue(Usuario.class);
                                 TelaInfoSaude.logado = d.getValue(Usuario.class);
                                 TelaContatosEmergencia.logado = d.getValue(Usuario.class);
+                                TelaDeVendas.logado = d.getValue(Usuario.class);
 
                                 mudarTela();
                                 mensagem = "Bem vindo\n"+l;
