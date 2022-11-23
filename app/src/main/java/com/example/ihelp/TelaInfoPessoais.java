@@ -67,6 +67,3 @@ public class TelaInfoPessoais extends AppCompatActivity {
 
 
 }
-
-
-

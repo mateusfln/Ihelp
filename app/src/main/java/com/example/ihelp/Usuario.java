@@ -6,11 +6,13 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Usuario {
     String dataNasc, nomeCompleto, sexo, cpf, nTelefone, doencasQuePossui, alergias, medicamentosQueFazUso, tipoSanguineo,numero1, numero2, numero3, nomeNumero1, nomeNumero2, nomeNumero3, planoContratado;
     String login;
+    String nome;
     int senha;
 
 
-    public Usuario(String login, int senha) {
+    public Usuario(String login, String nome, int senha) {
         this.login = login;
+        this.nome = nome;
         this.senha = senha;
 
     }
@@ -67,6 +69,14 @@ public class Usuario {
 
     public int getSenha() {
         return senha;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public void setSenha(int senha) {
@@ -202,8 +212,8 @@ public class Usuario {
         TelaInfoPessoais.logado = this;
         TelaInfoSaude.logado = this;
         TelaContatosEmergencia.logado = this;
+        TelaDeVendas.logado = this;
     }
 
 
 }
-

@@ -3,16 +3,21 @@ package com.example.ihelp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class TelaColetarDados extends AppCompatActivity {
+    TextView viewNome;
+    static Usuario logado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_coletar_dados);
         getSupportActionBar().hide();
+        viewNome = findViewById(R.id.viewNome);
+        viewNome.setText("Olá, "+logado.nome);
     }
     public void informacoesPessoais(View view){
         Intent i = new Intent(this, TelaInfoPessoais.class);

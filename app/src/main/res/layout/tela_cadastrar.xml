@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7b1212"
+    android:background="#fff8ed"
     tools:context=".TelaCadastro">
 
     <ImageView
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.114"
-        app:srcCompat="@drawable/iconeihelp" />
+        app:srcCompat="@drawable/logoihlep" />
 
     <Button
         android:id="@+id/button8"
@@ -33,34 +33,19 @@
         app:strokeColor="#00000000"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="226dp"
-        android:layout_height="31dp"
-        android:text="Cadastro"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.411" />
-
     <EditText
         android:id="@+id/senhaCadastro"
         android:layout_width="242dp"
         android:layout_height="45dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="232dp"
-        android:background="#000000"
+        android:background="#fff8ed"
         android:ems="10"
         android:hint="Senha"
         android:inputType="numberPassword"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -75,14 +60,14 @@
         android:layout_height="45dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="60dp"
-        android:background="#000000"
-        android:backgroundTint="#000000"
+        android:background="#FFFFFF"
+        android:backgroundTint="#fff8ed"
         android:ems="10"
         android:hint="E-mail"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -91,13 +76,14 @@
         app:layout_constraintVertical_bias="0.437"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
         android:text="Já possui login? Faça login aqui."
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -109,10 +95,11 @@
         android:id="@+id/botao2"
         android:layout_width="144dp"
         android:layout_height="38dp"
-        android:backgroundTint="#000000"
+        android:backgroundTint="#5390e1"
         android:hint="Cadastrar"
         android:onClick="cadastrar"
         android:text="Cadastrar"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -120,4 +107,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.789"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/nomeCadastro"
+        android:layout_width="242dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginEnd="85dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36"
+        tools:ignore="SpeakableTextPresentCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

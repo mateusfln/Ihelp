@@ -4,25 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7b1212"
+    android:background="#fff8ed"
     tools:context=".TelaDeVendas">
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="257dp"
-        android:layout_height="129dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046"
-        app:srcCompat="@drawable/iconeihelp" />
 
     <TextView
         android:id="@+id/plano1"
         android:layout_width="285dp"
         android:layout_height="101dp"
-        android:background="#000000"
+        android:background="#5390e1"
         android:onClick="salvarPlano1"
         android:text="Plano ConfortMax         49,90/mês"
         android:textAlignment="center"
@@ -38,7 +27,7 @@
         android:id="@+id/plano2"
         android:layout_width="285dp"
         android:layout_height="101dp"
-        android:background="#000000"
+        android:background="#5390e1"
         android:onClick="salvarPlano2"
         android:text="Plano ConfortPlus         89,90/mês"
         android:textAlignment="center"
@@ -56,11 +45,22 @@
         android:layout_height="116dp"
         android:text="Escolha abaixo o seu plano de saúde!"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.341" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088"
+        app:srcCompat="@drawable/logoihlep" />
 </androidx.constraintlayout.widget.ConstraintLayout>

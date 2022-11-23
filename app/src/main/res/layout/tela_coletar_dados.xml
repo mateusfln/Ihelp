@@ -4,25 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7b1212"
+    android:background="#fff8ed"
     tools:context=".TelaColetarDados">
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="135dp"
-        android:layout_height="64dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041"
-        app:srcCompat="@drawable/iconeihelp" />
 
     <Button
         android:id="@+id/InfoSaude"
         android:layout_width="263dp"
         android:layout_height="48dp"
-        android:backgroundTint="#000000"
+        android:backgroundTint="#5390e1"
         android:hint="informaçoes de saúde"
         android:onClick="informacoesSaude"
         android:textColorHint="#FFFFFF"
@@ -38,7 +27,7 @@
         android:id="@+id/CttEmergencia"
         android:layout_width="263dp"
         android:layout_height="48dp"
-        android:backgroundTint="#000000"
+        android:backgroundTint="#5390e1"
         android:hint="Contatos de emergência"
         android:onClick="informacoesNumero"
         android:textColorHint="#FFFFFF"
@@ -54,7 +43,7 @@
         android:id="@+id/Infopessoais"
         android:layout_width="261dp"
         android:layout_height="51dp"
-        android:backgroundTint="#000000"
+        android:backgroundTint="#5390e1"
         android:hint="Informaçoes pessoais"
         android:onClick="informacoesPessoais"
         android:textColorHint="#FFFFFF"
@@ -68,20 +57,22 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="208dp"
+        android:layout_height="160dp"
+        android:backgroundTint="#5390e1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221"
+        app:layout_constraintVertical_bias="0.108"
         app:srcCompat="@drawable/iconelogin11111111111111111111111111_removebg_preview" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#000000"
+        android:backgroundTint="#5390e1"
         android:onClick="Planos"
         android:text="Planos"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -96,7 +87,7 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#000000"
+        android:backgroundTint="#5390e1"
         android:onClick="salvarInfo"
         android:text="Voltar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -105,5 +96,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.947" />
+
+    <TextView
+        android:id="@+id/viewNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="173dp"
+        android:layout_marginEnd="180dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35000002" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,6 +43,8 @@ public class TelaLogin extends AppCompatActivity {
         startActivity(i);
     }
 
+
+
     public void print(String p) {
         Toast.makeText(this, p, Toast.LENGTH_LONG).show();
     }
@@ -64,19 +66,22 @@ public class TelaLogin extends AppCompatActivity {
                 String l = emailogin.getText().toString();
                 String s = senhalogin.getText().toString();
                 if (TelaLogin.logado == null
+
                 ){
                     for (DataSnapshot d : snapshot.getChildren()) {
                         if(!TextUtils.isEmpty(l) && !TextUtils.isEmpty(s)){
                             int senhalogin_int = Integer.parseInt(senhalogin.getText().toString());
-                            if (d.getValue(Usuario.class).getLogin().equals(l) && d.getValue(Usuario.class).getSenha() == senhalogin_int) {
+                            if (d.getValue(Usuario.class).getLogin().equals(l) && d.getValue(Usuario.class).getSenha() == senhalogin_int && verificaFormatoEmail(l)) {
                                 TelaInfoPessoais.logado = d.getValue(Usuario.class);
                                 TelaLogin.logado = d.getValue(Usuario.class);
                                 TelaInfoSaude.logado = d.getValue(Usuario.class);
                                 TelaContatosEmergencia.logado = d.getValue(Usuario.class);
                                 TelaDeVendas.logado = d.getValue(Usuario.class);
+                                TelaColetarDados.logado = d.getValue(Usuario.class);
+
 
                                 mudarTela();
-                                mensagem = "Bem vindo\n"+l;
+                                mensagem = "Seja bem vindo!";
                                 break;
 
                             }else{
@@ -94,7 +99,11 @@ public class TelaLogin extends AppCompatActivity {
                 }
 
 
+
+
             }
+
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -106,6 +115,12 @@ public class TelaLogin extends AppCompatActivity {
 
     }
 
+    public boolean verificaFormatoEmail(String l){
+        if(!l.contains("@")){
+            return false;
+        }
+        return true;
+    }
+
+
 }
-
-
